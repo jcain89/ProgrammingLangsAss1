@@ -23,9 +23,32 @@ def get_dynamic_re() -> DynamicScope:
         print(i)
         print("LOCALS")
         print(i[0].f_locals.keys())
+        print("VALUES")
+        print(i[0].f_locals.values())
+        print("TYPE")
+        print(type(i[0].f_locals.keys()))
+        listkeys = list(i[0].f_locals.keys())
+        print("LIST")
+        print(listkeys,"\n")
+        print("Starting list print")
+        for k in listkeys:
+            print(k)
+            print(type(k))
+            #dict.update({k: (list(i[0].f_locals.values()))})
         print("FREEVARS")
         print(i[0].f_code.co_freevars)
+        print("TYPE")
+        print(i[0].f_code.co_freevars)
         print("\n")
+        #dict.update({k: i[0].f_locals.values()})
+        #dict.update(i[0].f_locals.keys())
+        print("DICTIONARY")
+        print(dict)
+
+#Questions
+#how to insert these values into the dictionary
+#how to filter out the free variables
+#
 
     # print("break")
     # for i in a:
